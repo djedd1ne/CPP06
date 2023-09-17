@@ -1,5 +1,5 @@
 #ifndef CONVERT_HPP
-#define CNVERT_HPP
+#define CONVERT_HPP
 
 #include <iostream>
 #include <string>
@@ -17,7 +17,6 @@ class Convert {
         double _double;
         e_type _type;
         e_type type(std::string input);
-        std::string ctos(char a);
 
     public:
         Convert();

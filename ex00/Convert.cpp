@@ -10,11 +10,11 @@ Convert::Convert(std::string input) {
             return ;
         case Char:
         {
-            input = std::string(1, input[0]);
-            _char = atoi(input.c_str());
+            _char = input.at(0);
             _int = static_cast<int>(_char);
             _float = static_cast<float>(_char);
             _double = static_cast<double>(_char);
+            break;
         }
         case Int:
         {
@@ -22,6 +22,7 @@ Convert::Convert(std::string input) {
             _char = static_cast<char>(_int);
             _float = static_cast<float>(_int);
             _double = static_cast<double>(_int);
+            break;
         }
         case Float:
         {
@@ -29,6 +30,7 @@ Convert::Convert(std::string input) {
             _char = static_cast<char>(_float);
             _int = static_cast<int>(_float);
             _double = static_cast<double>(_float);
+            break;
         }
         case Double:
         case Inf:
@@ -38,6 +40,7 @@ Convert::Convert(std::string input) {
             _char = static_cast<char>(_double);
             _int = static_cast<int>(_double);
             _float = static_cast<float>(_double);
+            break;
         }
     }
 }
